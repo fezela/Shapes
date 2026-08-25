@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://rh7poratkvj7"]
+
+[ext_resource type="Script" uid="uid://ci0me2wom1wjx" path="res://test_scene.gd" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://b52kvqx8pn8eh" path="res://orbital_system.tscn" id="2_ia1lp"]
+
+[node name="TestScene" type="Node2D" unique_id=652600949]
+script = ExtResource("1_ia1lp")
+
+[node name="OrbitalSystem" parent="." unique_id=1810098244 instance=ExtResource("2_ia1lp")]
