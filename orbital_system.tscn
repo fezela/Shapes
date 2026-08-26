@@ -9,3 +9,13 @@ script = ExtResource("1_sjoak")
 [node name="NucleusPlanet" type="Node2D" parent="." unique_id=1435264957]
 position = Vector2(117.00001, 68)
 script = ExtResource("2_18g4a")
+
+[node name="Orbit" type="Node2D" parent="NucleusPlanet" unique_id=146985079]
+
+[node name="FrontArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=237567019]
+
+[node name="BackArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=220354559]
+
+[node name="LeftArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=1257282077]
+
+[node name="RightArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=864179747]
