@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b31qsic134lqe" path="res://orbital_system.gd" id="1_sjoak"]
 [ext_resource type="Script" uid="uid://btyjpibbld4st" path="res://nucleus_planet.gd" id="2_18g4a"]
+[ext_resource type="Script" uid="uid://cfr2xhqgoyyld" path="res://front.gd" id="3_1ddwh"]
+[ext_resource type="Script" uid="uid://bal4uyfjn8q3i" path="res://orbit.gd" id="3_dlw3q"]
+[ext_resource type="Script" uid="uid://bohto6ud2w306" path="res://back.gd" id="5_ch603"]
 
 [node name="OrbitalSystem" type="Node2D" unique_id=1810098244]
 script = ExtResource("1_sjoak")
@@ -11,10 +14,13 @@ position = Vector2(117.00001, 68)
 script = ExtResource("2_18g4a")
 
 [node name="Orbit" type="Node2D" parent="NucleusPlanet" unique_id=146985079]
+script = ExtResource("3_dlw3q")
 
-[node name="FrontArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=237567019]
+[node name="Front" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=237567019]
+script = ExtResource("3_1ddwh")
 
-[node name="BackArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=220354559]
+[node name="Back" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=220354559]
+script = ExtResource("5_ch603")
 
 [node name="LeftArc" type="Line2D" parent="NucleusPlanet/Orbit" unique_id=1257282077]
 
