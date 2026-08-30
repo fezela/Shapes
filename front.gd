@@ -11,10 +11,18 @@ func rebuild():
 	clear_points()
 	orbit = get_parent()
 	print("front length = ", orbit.front_length)
-	length = orbit.front_length
-	var depth = orbit.orbit_depth
-	add_point(Vector2(length, depth))
-	add_point(Vector2(-length, depth))
+	var segments := int(orbit.front_length / 2.0)
+	segments = max(segments, 16)
+	for i in range(segments + 1):
+		var progress = float(i) / segments
+		var angle = PI * progress
+		var x = cos(angle) * orbit.front_length
+		var y = sin(angle) * orbit.orbit_depth
+		add_point(Vector2(x,y))
+	#length = orbit.front_length
+	#var depth = orbit.orbit_depth
+	#add_point(Vector2(length, depth))
+	#add_point(Vector2(-length, depth))
 	width = orbit.front_width
 	default_color = Color.FLORAL_WHITE
 
