@@ -19,6 +19,18 @@ func _ready() -> void:
 	back_width = front_width / 2
 	$Front.rebuild()
 	$Back.rebuild()
+	var front_points = $Front.points
+	var back_points = $Back.points
+	front_points.reverse()
+	back_points.reverse()
+	var orbit_path_array = []
+	for i in front_points:
+		orbit_path_array.append(i)
+	for i in back_points:
+		orbit_path_array.append(i)
+	#print("front_points = ", front_points)
+	#print("back_points = ", back_points)
+	print("orbit_path_array = ", orbit_path_array)
 	
 	
 
